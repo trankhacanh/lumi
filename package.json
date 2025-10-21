@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "nodemailer": "^7.0.9",
+    "react-spinner": "^0.2.7",
+    "react-spinners": "^0.17.0",
+    "three": "^0.180.0"
+  }
+}
