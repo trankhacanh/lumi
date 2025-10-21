@@ -10,6 +10,7 @@ const io = new Server(server, {
     cors: {
         origin: "https://lumi-hm4h.onrender.com",
         methods: ["GET", "POST"],
+         credentials: true  
     },
 });
 
