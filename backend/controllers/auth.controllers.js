@@ -22,7 +22,7 @@ export const signUp = async (req, res) => {
 
         const token = await genToken(user._id);
 
-        res.cookie("token", token, { httpOnly: true, maxAge: 10 * 365 * 24 * 60 * 60 * 1000, secure: false, sameSite: "Strict" });
+        res.cookie("token", token, { httpOnly: true, maxAge: 10 * 365 * 24 * 60 * 60 * 1000, secure: true, sameSite: "none" });
         return res.status(201).json({ message: "User created successfully", user, token });
 
     } catch (error) {
@@ -53,8 +53,7 @@ export const signIn = async (req, res) => {
         res.cookie("token", token, {
             httpOnly: true,
             maxAge: 10 * 365 * 24 * 60 * 60 * 1000,
-            secure: false, // phải là false nếu không dùng HTTPS
-            sameSite: "Strict", // hoặc "Strict" nếu muốn an toàn hơn
+          secure: true, sameSite: "none"
         });
 
         return res.status(200).json({
