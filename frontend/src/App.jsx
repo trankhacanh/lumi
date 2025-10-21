@@ -18,7 +18,7 @@ import getAllStories from "./hooks/getAllStories";
 import { io } from "socket.io-client";
 import Messages from "./pages/Messages";
 import MessageArea from "./pages/MessageArea";
-export const severUrl = "http://localhost:8000";
+export const severUrl = "https://lumi-backend-tczn.onrender.com";
 import { useDispatch } from "react-redux";
 import { setOnlineUsers, setSocket } from "./redux/socketSlice";
 import getFollowingList from "./hooks/getFollowingList";
